@@ -6,8 +6,7 @@ function ListView(props) {
   const names = props.name;
   const listItems = names.map((name, index) =>
     <div>
-      <h3>{name}</h3>
-      <Button onClick={()=>{props.removeItem(index)}}>X</Button>
+      <h3>{name} <Button onClick={()=>{props.removeItem(index)}}>X</Button> </h3>
     </div>
   );
 
