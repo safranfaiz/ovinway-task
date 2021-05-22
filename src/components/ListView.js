@@ -5,13 +5,13 @@ function ListView(props) {
 
   const names = props.name;
   const listItems = names.map((name, index) =>
-    <div>
-      <h3>{name} <Button onClick={()=>{props.removeItem(index)}}>X</Button> </h3>
-    </div>
+    <li>
+      <h5>{`${index+1}. `} {name} <Button onClick={()=>{props.removeItem(index)}}>X</Button> </h5>
+    </li>
   );
 
   return (
-    <div>{listItems}</div>
+    <ul style={{listStyle:"none"}}>{listItems}</ul>
   );
 
 }
